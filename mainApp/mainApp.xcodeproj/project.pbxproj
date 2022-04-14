@@ -15,6 +15,7 @@
 		D770466A2808771B009EF40E /* mainAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77046692808771B009EF40E /* mainAppTests.swift */; };
 		D77046742808771B009EF40E /* mainAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77046732808771B009EF40E /* mainAppUITests.swift */; };
 		D77046762808771B009EF40E /* mainAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77046752808771B009EF40E /* mainAppUITestsLaunchTests.swift */; };
+		D7704685280877E4009EF40E /* unicocheck-ios-spm in Frameworks */ = {isa = PBXBuildFile; productRef = D7704684280877E4009EF40E /* unicocheck-ios-spm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7704685280877E4009EF40E /* unicocheck-ios-spm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +150,9 @@
 			dependencies = (
 			);
 			name = mainApp;
+			packageProductDependencies = (
+				D7704684280877E4009EF40E /* unicocheck-ios-spm */,
+			);
 			productName = mainApp;
 			productReference = D770464F28087719009EF40E /* mainApp.app */;
 			productType = "com.apple.product-type.application";
@@ -220,6 +225,10 @@
 				Base,
 			);
 			mainGroup = D770464628087719009EF40E;
+			packageReferences = (
+				D7704683280877E4009EF40E /* XCRemoteSwiftPackageReference "unico-check-ios" */,
+				D77046862808784C009EF40E /* XCRemoteSwiftPackageReference "orb-onboarding" */,
+			);
 			productRefGroup = D770465028087719009EF40E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -594,6 +603,33 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D7704683280877E4009EF40E /* XCRemoteSwiftPackageReference "unico-check-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/acesso-io/unico-check-ios";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		D77046862808784C009EF40E /* XCRemoteSwiftPackageReference "orb-onboarding" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RonaldMaciel/orb-onboarding";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D7704684280877E4009EF40E /* unicocheck-ios-spm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D7704683280877E4009EF40E /* XCRemoteSwiftPackageReference "unico-check-ios" */;
+			productName = "unicocheck-ios-spm";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D770464728087719009EF40E /* Project object */;
 }
